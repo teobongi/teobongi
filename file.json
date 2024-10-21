@@ -1,0 +1,129 @@
+{
+    "Nomi": [
+
+        {
+            "Nome": "Matteo"
+        },
+
+        {
+            "Nome": "Carlo"
+        },
+
+        {
+            "Nome": "Paolo"
+        }
+
+    ],
+
+    "Cognomi": [
+
+        {
+            "Cognome": "Bongiorni"
+        },
+
+        {
+            "Cognome": "Marrone"
+        },
+
+        {
+            "Cognome": "Russo"
+        }
+    ],
+
+    "Eta": [
+
+        {
+            "Eta": "18"
+        },
+
+        {
+            "Eta": "42"
+        },
+
+        {
+            "Eta": "34"
+        }
+    ],
+
+    "Indirizzi": [
+
+        {
+            "Indirizzo": "Via caduti"
+        },
+
+        {
+            "Indirizzo": "Via Italia"
+        },
+
+        {
+            "Indirizzo": "Via Roma"
+        }
+    ],
+
+    "Citta": [
+
+        {
+            "Citta": "Arese"
+        },
+
+        {
+            "Citta": "Magenta"
+        },
+
+        {
+            "Citta": "Bergamo"
+        }
+    ],
+
+    "Telefoni": [
+
+        {
+            "Telefoni": [
+
+                {
+                    "Telefono1": "8432823320",
+
+                    "Telefono2": "3421274432"
+                },
+
+                {
+                    "Telefono1": "2324354543",
+
+                    "Telefono2": "2324343542"
+                },
+
+                {
+                    "Telefono1": "32155466543",
+
+                    "Telefono2": "32435346523"
+                }
+            ]
+        }
+    ],
+
+    "Sport": [
+
+        {
+            "Sport": [
+
+                {
+                    "Sport1": "Calcio",
+
+                    "Sport2": "Nuoto"
+                },
+
+                {
+                    "Sport1": "Fresbee",
+
+                    "Sport2": "Hockey"
+                },
+
+                {
+                    "Sport1": "Tennis",
+
+                    "Sport2": "Pallavolo"
+                }
+            ]
+        }
+    ]
+}
