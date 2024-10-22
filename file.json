@@ -1,39 +1,82 @@
-{ 
-    "Nomi": 
-    [ { 
-        "Nome": "Antonio" }, 
-        { "Nome": "Luigi" }, 
-        { "Nome": "Filippo" } ],
-    "Cognomi": 
-    [ { 
-        "Cognome": "Rossi" }, 
-        { "Cognome": "Bianchi" }, 
-        { "Cognome": "Verdi" } ], 
-    "Eta": 
-    [ { "Eta": "16" }, 
-        { "Eta": "21" }, 
-        { "Eta": "24" } ], 
-    "Indirizzi": 
-    [ { "Indirizzo": "Via Milano" }, 
-        { "Indirizzo": "Via Varese" }, 
-        { "Indirizzo": "Via Monza" } ], 
-    "Citta": [ { "Citta": "Milano" }, 
-        { "Citta": "Novara" }, 
-        { "Citta": "Lainate" } ], 
-    "Telefoni": 
-    [ { "Telefoni": 
-        [ { "Telefono1": "6548585855", 
-            "Telefono2": "8778878765" },
-            { "Telefono1": "8876876876", 
-                "Telefono2": "3787273278" },
-            { "Telefono1": "7827798999", 
-                "Telefono2": "7868876868" } ] 
-    } ], 
-    "Sport": 
-    [ { "Sport": 
-        [ { "Sport1": "Calcio", 
-            "Sport2": "Ippica" },
-            { "Sport1": "Tennis", 
-                "Sport2": "Pallamano" }, 
-            { "Sport1": "Tennis", "
-                Sport2": "Badminghton" } ] } ] }
+[
+    {
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "eta": 30,
+        "indirizzo": "Via Roma 1",
+        "citta": "Milano",
+        "telefono": "0123456789"
+    },
+    {
+        "nome": "Giulia",
+        "cognome": "Bianchi",
+        "eta": 25,
+        "indirizzo": "Via Milano 2",
+        "citta": "Torino",
+        "telefono": "0987654321"
+    },
+    {
+        "nome": "Luca",
+        "cognome": "Verdi",
+        "eta": 28,
+        "indirizzo": "Corso Italia 3",
+        "citta": "Firenze",
+        "telefono": "0112233445"
+    },
+    {
+        "nome": "Sara",
+        "cognome": "Neri",
+        "eta": 22,
+        "indirizzo": "Piazza della Libertà 4",
+        "citta": "Roma",
+        "telefono": "0223344556"
+    },
+    {
+        "nome": "Andrea",
+        "cognome": "Gallo",
+        "eta": 35,
+        "indirizzo": "Via Nazionale 5",
+        "citta": "Napoli",
+        "telefono": "0334455667"
+    },
+    {
+        "nome": "Martina",
+        "cognome": "Ruggeri",
+        "eta": 27,
+        "indirizzo": "Viale delle Nazioni 6",
+        "citta": "Bologna",
+        "telefono": "0445566778"
+    },
+    {
+        "nome": "Francesco",
+        "cognome": "Ferri",
+        "eta": 40,
+        "indirizzo": "Via Firenze 7",
+        "citta": "Genova",
+        "telefono": "0556677889"
+    },
+    {
+        "nome": "Elena",
+        "cognome": "Gallo",
+        "eta": 31,
+        "indirizzo": "Corso del Sole 8",
+        "citta": "Venezia",
+        "telefono": "0667788990"
+    },
+    {
+        "nome": "Alessandro",
+        "cognome": "Marini",
+        "eta": 29,
+        "indirizzo": "Strada delle Rose 9",
+        "citta": "Verona",
+        "telefono": "0778899001"
+    },
+    {
+        "nome": "Chiara",
+        "cognome": "De Luca",
+        "eta": 24,
+        "indirizzo": "Via dei Fiori 10",
+        "citta": "Palermo",
+        "telefono": "0889900112"
+    }
+]
