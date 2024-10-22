@@ -13,7 +13,7 @@
     <script>
         function caricaDati() { 
             var file = new XMLHttpRequest(); 
-            file.open("GET", "https://raw.githubusercontent.com/Mattia-Visentin/mattiavise/refs/heads/main/JSON/Anagrafica.json", true); 
+            file.open("GET", "https://raw.githubusercontent.com/teobongi/teobongi/refs/heads/main/file.json", true); 
             file.send(); file.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) { 
                     var jsonDoc = JSON.parse(file.responseText); 
