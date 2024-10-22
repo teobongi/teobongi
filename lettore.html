@@ -18,7 +18,7 @@
       <script>
       let tbody=document.getElementByIOD("tbody");
         let lett=new XMLHttpRequest();
-          lett.open('GET', 'file.json', true);
+          lett.open('GET', 'https://raw.githubusercontent.com/teobongi/teobongi/refs/heads/main/file.json', true);
           lett.send();
           lett.onload=function(){
               if(this.status==200 && readystate==4){
