@@ -1,1 +1,58 @@
+<html> 
+    <head> 
+        <link rel="stylesheet" href="stili.css"> 
+    </head> 
+    <body> 
+        <div class="generale"> 
+            <div class="form"> 
+                <h1 class="Titolo"> Tabella Anagrafica JSON </h1> 
+            </div> 
+            <br>
+            <table id="tabella" style="visibility: hidden;">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Età</th>
+                        <th>Indirizzo</th>
+                        <th>Città</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
 
+                </tbody>
+            </table>
+        </div> 
+    </body> 
+    <script>
+        var file = new XMLHttpRequest(); 
+        file.open("GET", "file.json", true); 
+        file.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonDoc = JSON.parse(file.responseText); 
+                mostraInfo(jsonDoc);
+            }
+        }; 
+        file.send(); 
+        var tabella=document.getElementById("tabella");
+        var tbody=document.getElementById("tbody");
+        function mostraInfo(ogg) {
+    tabella.style.visibility = "visible";
+    for (let i = 0; i < ogg.length; i++) { 
+        var riga = document.createElement("tr");
+        tbody.appendChild(riga);
+        var telefoni = ogg[i].telefoni.join(", ");
+        
+        riga.innerHTML = `<td>${ogg[i].nome}</td>
+                          <td>${ogg[i].cognome}</td>
+                          <td>${ogg[i].eta}</td>
+                          <td>${ogg[i].indirizzo}</td>
+                          <td>${ogg[i].citta}</td>
+                          <td>${telefoni}</td>`;
+    }
+}
+
+    
+ </script> 
+</html>
