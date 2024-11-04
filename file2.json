@@ -1,0 +1,82 @@
+[
+    {
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "eta": 30,
+        "indirizzo": "Via Roma 1",
+        "citta": "Milano",
+        "telefoni": ["0123456789", "0123456788"]
+    },
+    {
+        "nome": "Giulia",
+        "cognome": "Bianchi",
+        "eta": 25,
+        "indirizzo": "Via Milano 2",
+        "citta": "Torino",
+        "telefoni": ["0987654321", "0987654320"]
+    },
+    {
+        "nome": "Luca",
+        "cognome": "Verdi",
+        "eta": 28,
+        "indirizzo": "Corso Italia 3",
+        "citta": "Firenze",
+        "telefoni": ["0112233445", "0112233446"]
+    },
+    {
+        "nome": "Sara",
+        "cognome": "Neri",
+        "eta": 22,
+        "indirizzo": "Piazza della Libertà 4",
+        "citta": "Roma",
+        "telefoni": ["0223344556", "0223344557"]
+    },
+    {
+        "nome": "Andrea",
+        "cognome": "Gallo",
+        "eta": 35,
+        "indirizzo": "Via Nazionale 5",
+        "citta": "Napoli",
+        "telefoni": ["0334455667", "0334455668"]
+    },
+    {
+        "nome": "Martina",
+        "cognome": "Ruggeri",
+        "eta": 27,
+        "indirizzo": "Viale delle Nazioni 6",
+        "citta": "Bologna",
+        "telefoni": ["0445566778", "0445566779"]
+    },
+    {
+        "nome": "Francesco",
+        "cognome": "Ferri",
+        "eta": 40,
+        "indirizzo": "Via Firenze 7",
+        "citta": "Genova",
+        "telefoni": ["0556677889", "0556677890"]
+    },
+    {
+        "nome": "Elena",
+        "cognome": "Gallo",
+        "eta": 31,
+        "indirizzo": "Corso del Sole 8",
+        "citta": "Venezia",
+        "telefoni": ["0667788990", "0667788991"]
+    },
+    {
+        "nome": "Alessandro",
+        "cognome": "Marini",
+        "eta": 29,
+        "indirizzo": "Strada delle Rose 9",
+        "citta": "Verona",
+        "telefoni": ["0778899001", "0778899002"]
+    },
+    {
+        "nome": "Chiara",
+        "cognome": "De Luca",
+        "eta": 24,
+        "indirizzo": "Via dei Fiori 10",
+        "citta": "Palermo",
+        "telefoni": ["0889900112", "0889900113"]
+    }
+]
