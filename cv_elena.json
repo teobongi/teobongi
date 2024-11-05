@@ -1,0 +1,21 @@
+{
+    "nome": "Elena Gallo",
+    "eta": 31,
+    "email": "elena.gallo@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Sviluppatrice Full Stack",
+            "azienda": "TechWave",
+            "anno_inizio": 2016,
+            "anno_fine": 2023,
+            "descrizione": "Sviluppo di applicazioni web full-stack con focus su JavaScript e Node.js."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Informatica",
+            "universita": "Università di Venezia",
+            "anno": 2015
+        }
+    ]
+}
