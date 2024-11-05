@@ -26,7 +26,7 @@
         "indirizzo": "Corso Italia 3",
         "citta": "Firenze",
         "telefoni": ["0112233445", "0112233446"],
-        "immagine": "images/luca.jpg",
+        "immagine": "antonio.jpg",
         "cv": "cv_luca.json"
     }
 ]
