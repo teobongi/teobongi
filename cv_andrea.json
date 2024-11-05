@@ -1,0 +1,21 @@
+{
+    "nome": "Andrea Gallo",
+    "eta": 35,
+    "email": "andrea.gallo@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Project Manager",
+            "azienda": "GlobalTech",
+            "anno_inizio": 2015,
+            "anno_fine": 2023,
+            "descrizione": "Gestione di progetti IT e coordinamento di team multidisciplinari."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Ingegneria Gestionale",
+            "universita": "Politecnico di Milano",
+            "anno": 2014
+        }
+    ]
+}
