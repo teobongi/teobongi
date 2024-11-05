@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Visualizzazione</title>
-    <link rel="stylesheet" href="stiliCV.css">
+    <link rel="stylesheet" href="stili.css">
 </head>
 <body>
     <div class="cv-container">
@@ -14,7 +14,7 @@
     </div>
 
     <script>
-        // Funzione per ottenere il parametro dalla URL
+        // Funzione per ottenere il parametro 'cvFile' dalla URL
         function getUrlParameter(name) {
             var url = new URL(window.location.href);
             var paramValue = url.searchParams.get(name);
@@ -24,7 +24,12 @@
         // Funzione per caricare il CV dal file JSON
         function caricaCV(cvFile) {
             fetch(cvFile)
-                .then(response => response.json())
+                .then(response => {
+                    if (response.ok) {
+                        return response.json(); // Converte la risposta in JSON
+                    }
+                    throw new Error('File JSON non trovato');
+                })
                 .then(data => {
                     mostraCV(data);
                 })
@@ -37,8 +42,66 @@
         // Funzione per visualizzare il CV in formato Europass
         function mostraCV(cvData) {
             const cvContent = document.getElementById('cv-content');
-
+            
+            // Costruzione del CV in formato Europass
             cvContent.innerHTML = `
                 <header class="cv-header">
                     <h1>${cvData.nome}</h1>
-                   
+                    <p><strong>Email:</strong> ${cvData.email}</p>
+                </header>
+
+                <section class="cv-experienza">
+                    <h2>Esperienza Lavorativa</h2>
+                    <ul>
+                        ${cvData.esperienza.map(exp => `
+                            <li>
+                                <strong>${exp.ruolo}</strong> presso ${exp.azienda} (${exp.anno_inizio} - ${exp.anno_fine})
+                                <p>${exp.descrizione}</p>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </section>
+
+                <section class="cv-istruzione">
+                    <h2>Istruzione</h2>
+                    <ul>
+                        ${cvData.istruzione.map(istruzione => `
+                            <li>
+                                <strong>${istruzione.titolo}</strong> presso ${istruzione.universita} (${istruzione.anno})
+                            </li>
+                        `).join('')}
+                    </ul>
+                </section>
+
+                <section class="cv-competenze">
+                    <h2>Competenze</h2>
+                    <ul>
+                        ${cvData.competenze.map(comp => `
+                            <li>${comp}</li>
+                        `).join('')}
+                    </ul>
+                </section>
+
+                <section class="cv-lingue">
+                    <h2>Lingue</h2>
+                    <ul>
+                        ${cvData.lingue.map(lingua => `
+                            <li><strong>${lingua.lingua}</strong> - ${lingua.livello}</li>
+                        `).join('')}
+                    </ul>
+                </section>
+            `;
+        }
+
+        // Ottieni il parametro 'cvFile' dalla URL
+        const cvFile = getUrlParameter('cvFile');
+
+        // Se il parametro esiste, carica il file JSON corrispondente
+        if (cvFile) {
+            caricaCV(cvFile);
+        } else {
+            alert('CV non trovato');
+        }
+    </script>
+</body>
+</html>
