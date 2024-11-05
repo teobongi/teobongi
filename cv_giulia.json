@@ -1,0 +1,21 @@
+{
+    "nome": "Giulia Bianchi",
+    "eta": 25,
+    "email": "giulia.bianchi@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Grafica e Designer",
+            "azienda": "DesignStudio",
+            "anno_inizio": 2019,
+            "anno_fine": 2024,
+            "descrizione": "Progettazione di loghi, interfacce web e materiali di marketing."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Design Grafico",
+            "universita": "Politecnico di Torino",
+            "anno": 2018
+        }
+    ]
+}
