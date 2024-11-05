@@ -7,7 +7,7 @@
         "citta": "Milano",
         "telefoni": ["0123456789", "0123456788"],
         "immagine": "sanberlusca2.jpg",
-        "cv": "cv_mario.json"
+        "cv": "marioCV.html"
     },
     {
         "nome": "Giulia",
