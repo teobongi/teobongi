@@ -16,7 +16,7 @@
         "indirizzo": "Via Milano 2",
         "citta": "Torino",
         "telefoni": ["0987654321", "0987654320"],
-        "immagine": "images/giulia.jpg",
+        "immagine": "alessia.jpg",
         "cv": "cv_giulia.json"
     },
     {
