@@ -1,0 +1,21 @@
+{
+    "nome": "Luca Verdi",
+    "eta": 28,
+    "email": "luca.verdi@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Analista Dati",
+            "azienda": "DataSolutions",
+            "anno_inizio": 2017,
+            "anno_fine": 2023,
+            "descrizione": "Analisi di dati aziendali per ottimizzare le strategie di marketing e vendite."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Statistica",
+            "universita": "Università di Firenze",
+            "anno": 2016
+        }
+    ]
+}
