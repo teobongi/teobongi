@@ -38,4 +38,21 @@ body {
 
 .cv-section ul {
     list-style-type: none;
-   
+    margin: 0;
+    padding: 0;
+}
+
+.cv-section li {
+    margin-bottom: 10px;
+}
+
+.cv-section h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #555;
+}
+
+.cv-section p {
+    margin: 5px 0;
+    color: #666;
+}
