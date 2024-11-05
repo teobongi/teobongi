@@ -8,30 +8,20 @@
             "azienda": "TechCorp",
             "anno_inizio": 2018,
             "anno_fine": 2023,
-            "descrizione": "Sviluppo di applicazioni web in JavaScript, PHP e Laravel."
-        },
-        {
-            "ruolo": "Frontend Developer",
-            "azienda": "WebSolutions",
-            "anno_inizio": 2015,
-            "anno_fine": 2018,
-            "descrizione": "Sviluppo di interfacce utente interattive utilizzando HTML, CSS, JavaScript."
+            "descrizione": "Sviluppo di applicazioni web in JavaScript e PHP."
         }
     ],
     "istruzione": [
         {
             "titolo": "Laurea in Informatica",
-            "universita": "Università degli Studi di Milano",
+            "universita": "Università di Milano",
             "anno": 2016
         }
     ],
     "competenze": [
-        "JavaScript",
-        "PHP",
-        "Laravel",
-        "HTML/CSS",
-        "Git",
-        "SQL"
+        "Programmazione in JavaScript",
+        "Sviluppo Frontend (HTML, CSS, React)",
+        "Sviluppo Backend (Node.js, PHP)"
     ],
     "lingue": [
         {
@@ -40,7 +30,7 @@
         },
         {
             "lingua": "Inglese",
-            "livello": "Avanzato"
+            "livello": "C1"
         }
     ]
 }
