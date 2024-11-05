@@ -1,1 +1,22 @@
+{
+    "nome": "Chiara De Luca",
+    "eta": 24,
+    "email": "chiara.deluca@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Assistente Marketing",
+            "azienda": "BrandUp",
+            "anno_inizio": 2020,
+            "anno_fine": 2024,
+            "descrizione": "Supporto nelle attività di marketing e gestione delle campagne pubblicitarie online."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Economia e Marketing",
+            "universita": "Università di Palermo",
+            "anno": 2020
+        }
+    ]
+}
 
