@@ -1,0 +1,21 @@
+{
+    "nome": "Mario Rossi",
+    "eta": 30,
+    "email": "mario.rossi@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Sviluppatore Web",
+            "azienda": "TechCorp",
+            "anno_inizio": 2018,
+            "anno_fine": 2023,
+            "descrizione": "Sviluppo di applicazioni web in JavaScript e PHP."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Informatica",
+            "universita": "Università di Milano",
+            "anno": 2016
+        }
+    ]
+}
