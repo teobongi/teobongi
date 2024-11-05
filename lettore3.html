@@ -5,7 +5,7 @@
     <body> 
         <div class="generale"> 
             <div class="form"> 
-                <h1 class="Titolo"> Tabella Anagrafica JSON 2.0</h1> 
+                <h1 class="Titolo"> Tabella Anagrafica JSON 3.0</h1> 
             </div> 
             <br>
             <table id="tabella" style="visibility: hidden;">
@@ -28,7 +28,7 @@
     </body> 
     <script>
         var file = new XMLHttpRequest(); 
-        file.open("GET", "file2.json", true); 
+        file.open("GET", "file3.json", true); 
         file.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var jsonDoc = JSON.parse(file.responseText); 
