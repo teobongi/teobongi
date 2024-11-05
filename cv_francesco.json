@@ -1,0 +1,21 @@
+{
+    "nome": "Francesco Ferri",
+    "eta": 40,
+    "email": "francesco.ferri@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Direttore IT",
+            "azienda": "Innovative Solutions",
+            "anno_inizio": 2010,
+            "anno_fine": 2024,
+            "descrizione": "Supervisione delle tecnologie informatiche aziendali e gestione dei team IT."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Ingegneria Informatica",
+            "universita": "Università di Genova",
+            "anno": 2006
+        }
+    ]
+}
