@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Visualizzazione</title>
-    <link rel="stylesheet" href="stili.css">
+    <link rel="stylesheet" href="stiliCV.css">
 </head>
 <body>
     <div class="cv-container">
@@ -41,58 +41,4 @@
             cvContent.innerHTML = `
                 <header class="cv-header">
                     <h1>${cvData.nome}</h1>
-                    <p>${cvData.email}</p>
-                    <p>Età: ${cvData.eta}</p>
-                </header>
-                <section class="cv-section">
-                    <h2>Esperienza Professionale</h2>
-                    <ul>
-                        ${cvData.esperienza.map(exp => `
-                            <li>
-                                <h3>${exp.ruolo} - ${exp.azienda}</h3>
-                                <p>${exp.anno_inizio} - ${exp.anno_fine}</p>
-                                <p>${exp.descrizione}</p>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </section>
-                <section class="cv-section">
-                    <h2>Istruzione</h2>
-                    <ul>
-                        ${cvData.istruzione.map(edu => `
-                            <li>
-                                <h3>${edu.titolo}</h3>
-                                <p>${edu.universita}, ${edu.anno}</p>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </section>
-                <section class="cv-section">
-                    <h2>Competenze</h2>
-                    <ul>
-                        ${cvData.competenze.map(skill => `<li>${skill}</li>`).join('')}
-                    </ul>
-                </section>
-                <section class="cv-section">
-                    <h2>Lingue</h2>
-                    <ul>
-                        ${cvData.lingue.map(lang => `
-                            <li>${lang.lingua} - ${lang.livello}</li>
-                        `).join('')}
-                    </ul>
-                </section>
-            `;
-        }
-
-        // Otteniamo il parametro 'cv' dalla URL
-        var cvFile = getUrlParameter('cv');
-
-        if (cvFile) {
-            // Se il parametro è presente, carichiamo il CV corrispondente
-            caricaCV(cvFile);
-        } else {
-            alert("Nessun file CV fornito nella URL.");
-        }
-    </script>
-</body>
-</html>
+                   
