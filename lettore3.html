@@ -44,7 +44,6 @@
             for (let i = 0; i < ogg.length; i++) {
                 var riga = document.createElement("tr");
                 tbody.appendChild(riga);
-
                 var telefoni = ogg[i].telefoni.join(", ");
                 riga.innerHTML = `<td>${ogg[i].nome}</td>
                                   <td>${ogg[i].cognome}</td>
@@ -52,12 +51,11 @@
                                   <td>${ogg[i].indirizzo}</td>
                                   <td>${ogg[i].citta}</td>
                                   <td>${telefoni}</td>
-                                  <td><button onclick="visualizzaCV('${ogg[i].cv}')">Visualizza CV</button></td>`; // Tasto per visualizzare il CV
+                                  <td><img src="${ogg[i].immagine}" alt="${ogg[i].nome} ${ogg[i].cognome}" style="width: 50px; height: 50px; cursor: pointer;" onclick="visualizzaCV('${ogg[i].cv}')"></td>`; 
             }
         }
-
         function visualizzaCV(cvFile) {
-            window.open(cvFile, "_blank");  
+            window.open(cvFile, "_blank"); 
         }
     </script>
 </html>
