@@ -4,33 +4,24 @@
     "email": "giulia.bianchi@example.com",
     "esperienza": [
         {
-            "ruolo": "Web Designer",
-            "azienda": "Creative Studios",
-            "anno_inizio": 2020,
+            "ruolo": "Sviluppatrice Software",
+            "azienda": "WebSolutions",
+            "anno_inizio": 2019,
             "anno_fine": 2023,
-            "descrizione": "Progettazione e sviluppo di siti web e applicazioni mobile con un focus sulla User Experience (UX)."
-        },
-        {
-            "ruolo": "Graphic Designer",
-            "azienda": "DesignWorks",
-            "anno_inizio": 2018,
-            "anno_fine": 2020,
-            "descrizione": "Creazione di loghi, materiali pubblicitari e grafica per il web."
+            "descrizione": "Lavoro come sviluppatrice full-stack, principalmente con JavaScript e Python."
         }
     ],
     "istruzione": [
         {
-            "titolo": "Laurea in Design della Comunicazione",
-            "universita": "Politecnico di Milano",
+            "titolo": "Laurea in Ingegneria Informatica",
+            "universita": "Politecnico di Torino",
             "anno": 2018
         }
     ],
     "competenze": [
-        "Adobe Photoshop",
-        "Adobe Illustrator",
-        "HTML/CSS",
-        "JavaScript",
-        "UX/UI Design"
+        "Programmazione in Python",
+        "Sviluppo Full-Stack",
+        "Gestione Database (MySQL, MongoDB)"
     ],
     "lingue": [
         {
@@ -39,7 +30,7 @@
         },
         {
             "lingua": "Inglese",
-            "livello": "Intermedio"
+            "livello": "B2"
         }
     ]
 }
