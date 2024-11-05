@@ -4,18 +4,42 @@
     "email": "luca.verdi@example.com",
     "esperienza": [
         {
-            "ruolo": "Analista Dati",
-            "azienda": "DataSolutions",
-            "anno_inizio": 2017,
+            "ruolo": "Software Engineer",
+            "azienda": "DevSolutions",
+            "anno_inizio": 2019,
             "anno_fine": 2023,
-            "descrizione": "Analisi di dati aziendali per ottimizzare le strategie di marketing e vendite."
+            "descrizione": "Sviluppo di software aziendali in Java e Python."
+        },
+        {
+            "ruolo": "Junior Developer",
+            "azienda": "TechLabs",
+            "anno_inizio": 2017,
+            "anno_fine": 2019,
+            "descrizione": "Lavoro su progetti di sviluppo backend utilizzando Java e MySQL."
         }
     ],
     "istruzione": [
         {
-            "titolo": "Laurea in Statistica",
-            "universita": "Università di Firenze",
-            "anno": 2016
+            "titolo": "Laurea in Ingegneria Informatica",
+            "universita": "Università di Bologna",
+            "anno": 2017
+        }
+    ],
+    "competenze": [
+        "Java",
+        "Python",
+        "MySQL",
+        "Spring Framework",
+        "Git"
+    ],
+    "lingue": [
+        {
+            "lingua": "Italiano",
+            "livello": "Madrelingua"
+        },
+        {
+            "lingua": "Inglese",
+            "livello": "Avanzato"
         }
     ]
 }
