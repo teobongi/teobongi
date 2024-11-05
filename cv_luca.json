@@ -4,33 +4,24 @@
     "email": "luca.verdi@example.com",
     "esperienza": [
         {
-            "ruolo": "Software Engineer",
-            "azienda": "DevSolutions",
-            "anno_inizio": 2019,
-            "anno_fine": 2023,
-            "descrizione": "Sviluppo di software aziendali in Java e Python."
-        },
-        {
-            "ruolo": "Junior Developer",
-            "azienda": "TechLabs",
+            "ruolo": "Designer Grafico",
+            "azienda": "CreativeWorks",
             "anno_inizio": 2017,
-            "anno_fine": 2019,
-            "descrizione": "Lavoro su progetti di sviluppo backend utilizzando Java e MySQL."
+            "anno_fine": 2022,
+            "descrizione": "Design grafico e creazione di contenuti visivi per applicazioni mobile e siti web."
         }
     ],
     "istruzione": [
         {
-            "titolo": "Laurea in Ingegneria Informatica",
-            "universita": "Università di Bologna",
-            "anno": 2017
+            "titolo": "Laurea in Design Visivo",
+            "universita": "Accademia delle Belle Arti",
+            "anno": 2016
         }
     ],
     "competenze": [
-        "Java",
-        "Python",
-        "MySQL",
-        "Spring Framework",
-        "Git"
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "UI/UX Design"
     ],
     "lingue": [
         {
@@ -39,7 +30,7 @@
         },
         {
             "lingua": "Inglese",
-            "livello": "Avanzato"
+            "livello": "C1"
         }
     ]
 }
