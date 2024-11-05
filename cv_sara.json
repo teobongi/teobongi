@@ -1,0 +1,21 @@
+{
+    "nome": "Sara Neri",
+    "eta": 22,
+    "email": "sara.neri@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Social Media Manager",
+            "azienda": "SocialBrand",
+            "anno_inizio": 2021,
+            "anno_fine": 2024,
+            "descrizione": "Gestione delle strategie sui social media per aumentare l'engagement e la visibilità del brand."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Comunicazione Digitale",
+            "universita": "Università La Sapienza di Roma",
+            "anno": 2022
+        }
+    ]
+}
