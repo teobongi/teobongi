@@ -1,0 +1,21 @@
+{
+    "nome": "Martina Ruggeri",
+    "eta": 27,
+    "email": "martina.ruggeri@example.com",
+    "esperienza": [
+        {
+            "ruolo": "Marketing Specialist",
+            "azienda": "MarketPro",
+            "anno_inizio": 2019,
+            "anno_fine": 2024,
+            "descrizione": "Sviluppo di strategie di marketing online e offline per promuovere il brand."
+        }
+    ],
+    "istruzione": [
+        {
+            "titolo": "Laurea in Marketing e Comunicazione",
+            "universita": "Università di Bologna",
+            "anno": 2018
+        }
+    ]
+}
