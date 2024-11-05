@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Mario Rossi</title>
-    <link rel="stylesheet" href="stiliCV.css">
+    <title>CV - Visualizzazione</title>
+    <link rel="stylesheet" href="stili.css">
 </head>
 <body>
     <div class="cv-container">
         <div id="cv-content">
+            <!-- Il contenuto del CV verrà inserito dinamicamente qui -->
         </div>
     </div>
 
     <script>
+        // Funzione per ottenere il parametro dalla URL
+        function getUrlParameter(name) {
+            var url = new URL(window.location.href);
+            var paramValue = url.searchParams.get(name);
+            return paramValue;
+        }
+
+        // Funzione per caricare il CV dal file JSON
         function caricaCV(cvFile) {
             fetch(cvFile)
                 .then(response => response.json())
                 .then(data => {
                     mostraCV(data);
                 })
-                .catch(err => console.error("Errore nel caricamento del CV:", err));
+                .catch(err => {
+                    console.error("Errore nel caricamento del CV:", err);
+                    alert("Non è stato possibile caricare il CV.");
+                });
         }
 
+        // Funzione per visualizzare il CV in formato Europass
         function mostraCV(cvData) {
             const cvContent = document.getElementById('cv-content');
 
@@ -70,7 +83,16 @@
                 </section>
             `;
         }
-        caricaCV('cv_mario.json');
+
+        // Otteniamo il parametro 'cv' dalla URL
+        var cvFile = getUrlParameter('cv');
+
+        if (cvFile) {
+            // Se il parametro è presente, carichiamo il CV corrispondente
+            caricaCV(cvFile);
+        } else {
+            alert("Nessun file CV fornito nella URL.");
+        }
     </script>
 </body>
 </html>
