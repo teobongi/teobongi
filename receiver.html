@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receiver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2>Dati Inseriti</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Età</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+                <!-- I dati verranno inseriti qui tramite JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Recuperiamo la stringa JSON da localStorage
+        const jsonData = localStorage.getItem("userData");
+
+        // Se esistono dei dati, li visualizziamo
+        if (jsonData) {
+            const userData = JSON.parse(jsonData);
+
+            // Creiamo una nuova riga nella tabella
+            const tableBody = document.getElementById("dataTable");
+            const row = tableBody.insertRow();
+
+            // Creiamo e aggiungiamo le celle della tabella
+            const nomeCell = row.insertCell(0);
+            const cognomeCell = row.insertCell(1);
+            const etaCell = row.insertCell(2);
+
+            nomeCell.textContent = userData.nome;
+            cognomeCell.textContent = userData.cognome;
+            etaCell.textContent = userData.eta;
+        } else {
+            // Se non ci sono dati, mostriamo un messaggio
+            document.body.innerHTML = "<h2>No data found!</h2>";
+        }
+    </script>
+</body>
+</html>
