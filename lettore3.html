@@ -55,7 +55,8 @@
             }
         }
         function visualizzaCV(cvFile) {
-            window.location.href=cvFile; 
+            localstorage.setItem("json",cvfile);
+            window.location.href="cv.html"; 
         }
     </script>
 </html>
