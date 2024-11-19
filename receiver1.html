@@ -50,20 +50,16 @@
                 </tr>
             </thead>
             <tbody id="contactTable">
-                <!-- I dati verranno inseriti qui tramite JavaScript -->
             </tbody>
         </table>
     </div>
 
     <script>
-        // Recupera i dati JSON da localStorage
         const jsonData = localStorage.getItem("contactsData");
 
         if (jsonData) {
-            // Converte la stringa JSON in un oggetto JavaScript
             const contacts = JSON.parse(jsonData);
 
-            // Rende dinamicamente i dati nella tabella
             const contactTableElement = document.getElementById("contactTable");
             contacts.forEach(contact => {
                 const row = contactTableElement.insertRow();
@@ -73,7 +69,6 @@
                 phoneCell.textContent = contact.telefono;
             });
         } else {
-            // Se non ci sono dati, mostriamo un messaggio
             document.body.innerHTML = "<h2>Nessun dato trovato!</h2>";
         }
     </script>
