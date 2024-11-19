@@ -7,7 +7,7 @@
         "citta": "Milano",
         "telefoni": ["0123456789", "0123456788"],
         "immagine": "sanberlusca2.jpg",
-        "cv": "CV.html"
+        "cv": "cv_mario.json"
     },
     {
         "nome": "Giulia",
@@ -17,7 +17,7 @@
         "citta": "Torino",
         "telefoni": ["0987654321", "0987654320"],
         "immagine": "alessia.jpg",
-        "cv": "CV.html"
+        "cv": "cv_giulia.json"
     },
     {
         "nome": "Luca",
@@ -27,6 +27,6 @@
         "citta": "Firenze",
         "telefoni": ["0112233445", "0112233446"],
         "immagine": "antonio.jpg",
-        "cv": "CV.html"
+        "cv": "cv_luca.json"
     }
 ]
