@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Visualizzazione</title>
-    <link rel="stylesheet" href="stili.css">
+    <link rel="stylesheet" href="stili.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <div class="cv-container">
@@ -14,40 +14,41 @@
     </div>
 
     <script>
-        // Funzione per ottenere il parametro 'cvFile' dalla URL
-        function getUrlParameter(name) {
-            var url = new URL(window.location.href);
-            var paramValue = url.searchParams.get(name);
-            return paramValue;
-        }
-
-        // Funzione per caricare il CV dal file JSON
+        // Funzione per caricare il CV dal file JSON usando XMLHttpRequest
         function caricaCV(cvFile) {
-            fetch(cvFile)
-                .then(response => {
-                    if (response.ok) {
-                        return response.json(); // Converte la risposta in JSON
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', cvFile, true);  // Open a GET request for the CV file
+            xhr.onload = function() {
+                if (xhr.status === 200) {  // Check if the status is OK (200)
+                    try {
+                        var cvData = JSON.parse(xhr.responseText);  // Parse the JSON response
+                        mostraCV(cvData);  // Display the CV
+                    } catch (error) {
+                        console.error("Errore nel parsing del CV JSON:", error);
+                        alert("Errore nel formato del file JSON.");
                     }
-                    throw new Error('File JSON non trovato');
-                })
-                .then(data => {
-                    mostraCV(data);
-                })
-                .catch(err => {
-                    console.error("Errore nel caricamento del CV:", err);
+                } else {
+                    console.error("Errore nel caricamento del CV. Status:", xhr.status);
                     alert("Non è stato possibile caricare il CV.");
-                });
+                }
+            };
+            xhr.onerror = function() {
+                console.error("Errore di rete durante il caricamento del CV.");
+                alert("Errore di rete durante il caricamento del CV.");
+            };
+            xhr.send();  // Send the request
         }
 
         // Funzione per visualizzare il CV in formato Europass
         function mostraCV(cvData) {
             const cvContent = document.getElementById('cv-content');
-            
+
             // Costruzione del CV in formato Europass
             cvContent.innerHTML = `
                 <header class="cv-header">
                     <h1>${cvData.nome}</h1>
                     <p><strong>Email:</strong> ${cvData.email}</p>
+                    <p><strong>Età:</strong> ${cvData.eta}</p>
                 </header>
 
                 <section class="cv-experienza">
@@ -93,15 +94,16 @@
             `;
         }
 
-        // Ottieni il parametro 'cvFile' dalla URL
-        const cvFile = getUrlParameter('cvFile');
+        // Ottieni il parametro 'json' dalla localStorage
+        const cvFile = localStorage.getItem('json');  // Retrieve the filename from localStorage
 
         // Se il parametro esiste, carica il file JSON corrispondente
         if (cvFile) {
-            caricaCV(cvFile);
+            caricaCV(cvFile);  // Load the CV file
         } else {
             alert('CV non trovato');
         }
     </script>
 </body>
 </html>
+
