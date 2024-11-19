@@ -34,20 +34,17 @@
         <h2>Informazioni Contatti</h2>
         <p>Questi sono i contatti che verranno passati alla seconda pagina:</p>
         <ul id="contactList">
-            <!-- I dati verranno visualizzati qui -->
         </ul>
         <button id="passDataButton">Passa i dati alla pagina successiva</button>
     </div>
 
     <script>
-        // Oggetto JSON contenente i contatti (collection)
         const contacts = [
             { nome: "Giovanni Rossi", telefono: "333-1234567" },
             { nome: "Maria Bianchi", telefono: "333-2345678" },
             { nome: "Luca Verdi", telefono: "333-3456789" }
         ];
 
-        // Visualizza i contatti nella pagina
         const contactListElement = document.getElementById("contactList");
         contacts.forEach(contact => {
             const li = document.createElement("li");
@@ -55,15 +52,11 @@
             contactListElement.appendChild(li);
         });
 
-        // Funzione per passare i dati alla seconda pagina
         document.getElementById("passDataButton").addEventListener("click", function() {
-            // Converte l'oggetto JSON in stringa
             const jsonData = JSON.stringify(contacts);
             
-            // Salva la stringa JSON nel localStorage
             localStorage.setItem("contactsData", jsonData);
 
-            // Reindirizza alla pagina receiver.html
             window.location.href = "receiver1.html";
         });
     </script>
