@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Informazioni Contatti</h2>
+        <p>Questi sono i contatti che verranno passati alla seconda pagina:</p>
+        <ul id="contactList">
+            <!-- I dati verranno visualizzati qui -->
+        </ul>
+        <button id="passDataButton">Passa i dati alla pagina successiva</button>
+    </div>
+
+    <script>
+        // Oggetto JSON contenente i contatti (collection)
+        const contacts = [
+            { nome: "Giovanni Rossi", telefono: "333-1234567" },
+            { nome: "Maria Bianchi", telefono: "333-2345678" },
+            { nome: "Luca Verdi", telefono: "333-3456789" }
+        ];
+
+        // Visualizza i contatti nella pagina
+        const contactListElement = document.getElementById("contactList");
+        contacts.forEach(contact => {
+            const li = document.createElement("li");
+            li.textContent = `${contact.nome} - ${contact.telefono}`;
+            contactListElement.appendChild(li);
+        });
+
+        // Funzione per passare i dati alla seconda pagina
+        document.getElementById("passDataButton").addEventListener("click", function() {
+            // Converte l'oggetto JSON in stringa
+            const jsonData = JSON.stringify(contacts);
+            
+            // Salva la stringa JSON nel localStorage
+            localStorage.setItem("contactsData", jsonData);
+
+            // Reindirizza alla pagina receiver.html
+            window.location.href = "receiver1.html";
+        });
+    </script>
+</body>
+</html>
