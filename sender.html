@@ -57,25 +57,21 @@
         document.getElementById("dataForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            // Raccogliamo i dati dal form
+
             const nome = document.getElementById("nome").value;
             const cognome = document.getElementById("cognome").value;
             const eta = document.getElementById("eta").value;
 
-            // Creiamo un oggetto con i dati
             const userData = {
                 nome: nome,
                 cognome: cognome,
                 eta: eta
             };
 
-            // Convertiamo l'oggetto in una stringa JSON
             const jsonData = JSON.stringify(userData);
 
-            // Salviamo la stringa JSON in localStorage
             localStorage.setItem("userData", jsonData);
 
-            // Redirect alla pagina di ricezione
             window.location.href = "receiver.html";
         });
     </script>
