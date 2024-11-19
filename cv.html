@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Visualizzazione</title>
-    <link rel="stylesheet" href="stiliCV.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="stiliCV.css">
 </head>
 <body>
     <div class="cv-container">
         <div id="cv-content">
-            <!-- Il contenuto del CV verrà inserito dinamicamente qui -->
         </div>
     </div>
 
     <script>
-        // Funzione per caricare il CV dal file JSON usando XMLHttpRequest
         function caricaCV(cvFile) {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', cvFile, true);  // Open a GET request for the CV file
+            xhr.open('GET', cvFile, true);  
             xhr.onload = function() {
-                if (xhr.status === 200) {  // Check if the status is OK (200)
+                if (xhr.status === 200) {  
                     try {
-                        var cvData = JSON.parse(xhr.responseText);  // Parse the JSON response
-                        mostraCV(cvData);  // Display the CV
+                        var cvData = JSON.parse(xhr.responseText);  
+                        mostraCV(cvData);  
                     } catch (error) {
                         console.error("Errore nel parsing del CV JSON:", error);
                         alert("Errore nel formato del file JSON.");
@@ -39,11 +35,9 @@
             xhr.send();  // Send the request
         }
 
-        // Funzione per visualizzare il CV in formato Europass
         function mostraCV(cvData) {
             const cvContent = document.getElementById('cv-content');
 
-            // Costruzione del CV in formato Europass
             cvContent.innerHTML = `
                 <header class="cv-header">
                     <h1>${cvData.nome}</h1>
@@ -94,10 +88,8 @@
             `;
         }
 
-        // Ottieni il parametro 'json' dalla localStorage
         const cvFile = localStorage.getItem('json');  // Retrieve the filename from localStorage
 
-        // Se il parametro esiste, carica il file JSON corrispondente
         if (cvFile) {
             caricaCV(cvFile);  // Load the CV file
         } else {
