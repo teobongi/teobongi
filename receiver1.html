@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receiver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2>Contatti</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Numero di Telefono</th>
+                </tr>
+            </thead>
+            <tbody id="contactTable">
+                <!-- I dati verranno inseriti qui tramite JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Recupera i dati JSON da localStorage
+        const jsonData = localStorage.getItem("contactsData");
+
+        if (jsonData) {
+            // Converte la stringa JSON in un oggetto JavaScript
+            const contacts = JSON.parse(jsonData);
+
+            // Rende dinamicamente i dati nella tabella
+            const contactTableElement = document.getElementById("contactTable");
+            contacts.forEach(contact => {
+                const row = contactTableElement.insertRow();
+                const nameCell = row.insertCell(0);
+                const phoneCell = row.insertCell(1);
+                nameCell.textContent = contact.nome;
+                phoneCell.textContent = contact.telefono;
+            });
+        } else {
+            // Se non ci sono dati, mostriamo un messaggio
+            document.body.innerHTML = "<h2>Nessun dato trovato!</h2>";
+        }
+    </script>
+</body>
+</html>
