@@ -39,7 +39,7 @@
         var tabella = document.getElementById("tabella");
         var tbody = document.getElementById("tbody");
 
-        function mostraInfo(ogg) {
+       function mostraInfo(ogg) {
     tabella.style.visibility = "visible";
     for (let i = 0; i < ogg.length; i++) {
         var riga = document.createElement("tr");
@@ -52,17 +52,19 @@
             <td>${ogg[i].indirizzo}</td>
             <td>${ogg[i].citta}</td>
             <td>${telefoni}</td>
-            <td><img src="${ogg[i].immagine}" alt="${ogg[i].nome} ${ogg[i].cognome}" style="width: 50px; height: 50px; cursor: pointer;" onclick="visualizzaCV('${ogg[i].cv}')"></td>
             <td>
-                <img src="portfolio_icon.png" alt="Portfolio di ${ogg[i].nome}" style="width: 50px; height: 50px; cursor: pointer;" onclick="visualizzaPortfolio('${ogg[i].nome}')">
+                <img src="${ogg[i].immagine}" alt="${ogg[i].nome} ${ogg[i].cognome}" style="width: 50px; height: 50px; cursor: pointer;" onclick="visualizzaCV('${ogg[i].cv}')">
+            </td>
+            <td>
+                <img src="portfolio_icon.png" alt="Portfolio di ${ogg[i].nome}" style="width: 50px; height: 50px; cursor: pointer;" onclick="visualizzaPortfolio('${ogg[i].nome}_portfolio.json')">
             </td>
         `;
     }
 }
 
-function visualizzaPortfolio(nome) {
-    const portfolioFile = `${nome.toLowerCase()}_portfolio.xml`;
-    window.location.href = portfolioFile;
+function visualizzaPortfolio(portfolioFile) {
+    localStorage.setItem("portfolio", portfolioFile);
+    window.location.href = "portfolio.html";
 }
         function visualizzaCV(cvFile) {
             localStorage.setItem("json",cvFile);
