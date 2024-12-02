@@ -1,0 +1,16 @@
+{
+    "nome": "Mario",
+    "cognome": "Rossi",
+    "lavori": [
+        {
+            "titolo": "Sito Web Aziendale",
+            "descrizione": "Realizzazione del sito web per un'importante azienda.",
+            "link": "https://www.mariosite.com/aziendale"
+        },
+        {
+            "titolo": "Applicazione Mobile",
+            "descrizione": "Sviluppo di un'applicazione mobile multipiattaforma.",
+            "link": "https://www.mariosite.com/mobileapp"
+        }
+    ]
+}
