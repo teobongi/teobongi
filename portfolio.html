@@ -35,14 +35,11 @@
         }
 
         function mostraPortfolio(data) {
-    // Imposta il nome del portfolio
     document.getElementById("nome").innerText = `${data.nome} ${data.cognome}`;
     
-    // Crea una lista per i lavori
     const lavoriList = document.getElementById("lavori");
-    lavoriList.innerHTML = ""; // Svuota eventuali dati precedenti
+    lavoriList.innerHTML = ""; 
     
-    // Aggiungi ogni lavoro al portfolio
     data.lavori.forEach(lavoro => {
         const li = document.createElement("li");
         li.innerHTML = `
