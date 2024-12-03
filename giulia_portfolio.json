@@ -1,0 +1,21 @@
+{
+    "nome": "Giulia",
+    "cognome": "Bianchi",
+    "lavori": [
+        {
+            "titolo": "Blog di Cucina",
+            "descrizione": "Creazione di un blog di cucina con ricette e consigli pratici.",
+            "link": "https://example.com/giulia-cucina"
+        },
+        {
+            "titolo": "Design Grafico",
+            "descrizione": "Progettazione di grafiche per social media e campagne pubblicitarie.",
+            "link": "https://example.com/giulia-grafica"
+        },
+        {
+            "titolo": "Landing Page per Startup",
+            "descrizione": "Sviluppo di una landing page per una startup tecnologica.",
+            "link": "https://example.com/giulia-startup"
+        }
+    ]
+}
