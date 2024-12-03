@@ -18,14 +18,6 @@
     </div>
 
     <script>
-        const portfolioFile = localStorage.getItem("portfolio");
-
-        if (portfolioFile) {
-            caricaPortfolio(portfolioFile);
-        } else {
-            alert('Portfolio non trovato.');
-        }
-
         function caricaPortfolio(file) {
             const xhr = new XMLHttpRequest();
             xhr.open('GET', file, true);
@@ -61,6 +53,12 @@
                 `;
                 lavoriList.appendChild(li);
             });
+        }
+         const portfolioFile = localStorage.getItem("portfolio");
+         if (portfolioFile) {
+            caricaPortfolio(portfolioFile);
+        } else {
+            alert('Portfolio non trovato.');
         }
     </script>
 </body>
