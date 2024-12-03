@@ -18,9 +18,9 @@
     </div>
 
     <script>
-        function caricaPortfolio(file) {
+        function caricaPortfolio(PTfile) {
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', file, true);
+            xhr.open('GET', PTfile, true);
             xhr.onload = function() {
                 if (xhr.status === 200) {
                     try {
