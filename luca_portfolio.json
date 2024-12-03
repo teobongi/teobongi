@@ -1,0 +1,21 @@
+{
+    "nome": "Luca",
+    "cognome": "Verdi",
+    "lavori": [
+        {
+            "titolo": "Sistema di Prenotazione",
+            "descrizione": "Sviluppo di un sistema di prenotazione per un hotel.",
+            "link": "https://example.com/luca-prenotazione"
+        },
+        {
+            "titolo": "Portfolio Fotografico",
+            "descrizione": "Creazione di un sito per esporre il proprio portfolio fotografico.",
+            "link": "https://example.com/luca-fotografia"
+        },
+        {
+            "titolo": "App per Fitness",
+            "descrizione": "Sviluppo di un'app mobile per monitorare gli allenamenti e la dieta.",
+            "link": "https://example.com/luca-fitness"
+        }
+    ]
+}
