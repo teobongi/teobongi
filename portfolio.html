@@ -35,57 +35,24 @@
         }
 
         function mostraPortfolio(data) {
-           const content=document.getElementById('portfolio-content');
-            content.innerHTML = `
-                <header class="-header">
-                    <h1>${cvData.nome}</h1>
-                    <p><strong>Email:</strong> ${cvData.email}</p>
-                    <p><strong>Età:</strong> ${cvData.eta}</p>
-                </header>
-
-                <section class="cv-experienza">
-                    <h2>Esperienza Lavorativa</h2>
-                    <ul>
-                        ${cvData.esperienza.map(exp => `
-                            <li>
-                                <strong>${exp.ruolo}</strong> presso ${exp.azienda} (${exp.anno_inizio} - ${exp.anno_fine})
-                                <p>${exp.descrizione}</p>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </section>
-
-                <section class="cv-istruzione">
-                    <h2>Istruzione</h2>
-                    <ul>
-                        ${cvData.istruzione.map(istruzione => `
-                            <li>
-                                <strong>${istruzione.titolo}</strong> presso ${istruzione.universita} (${istruzione.anno})
-                            </li>
-                        `).join('')}
-                    </ul>
-                </section>
-
-                <section class="cv-competenze">
-                    <h2>Competenze</h2>
-                    <ul>
-                        ${cvData.competenze.map(comp => `
-                            <li>${comp}</li>
-                        `).join('')}
-                    </ul>
-                </section>
-
-                <section class="cv-lingue">
-                    <h2>Lingue</h2>
-                    <ul>
-                        ${cvData.lingue.map(lingua => `
-                            <li><strong>${lingua.lingua}</strong> - ${lingua.livello}</li>
-                        `).join('')}
-                    </ul>
-                </section>
-            `;
-        }
-        
+    // Imposta il nome del portfolio
+    document.getElementById("nome").innerText = `${data.nome} ${data.cognome}`;
+    
+    // Crea una lista per i lavori
+    const lavoriList = document.getElementById("lavori");
+    lavoriList.innerHTML = ""; // Svuota eventuali dati precedenti
+    
+    // Aggiungi ogni lavoro al portfolio
+    data.lavori.forEach(lavoro => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <strong>${lavoro.titolo}</strong><br>
+            ${lavoro.descrizione}<br>
+            <a href="${lavoro.link}" target="_blank">Visita</a>
+        `;
+        lavoriList.appendChild(li);
+    });
+}
     </script>
 </body>
 </html>
