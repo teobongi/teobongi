@@ -12,7 +12,7 @@
     </div>
 
     <script>
-        let PTfiles=locals
+        let PTfiles=localStorage.getItem(portfolio);
         caricaPortfolio(PTfiles)
         function caricaPortfolio(PTfile) {
             const xhr = new XMLHttpRequest();
