@@ -1,6 +1,6 @@
 [
     {
-        "nome": "Mario",
+        "nome": "mario",
         "cognome": "Rossi",
         "eta": 30,
         "indirizzo": "Via Roma 1",
@@ -11,7 +11,7 @@
         "portfolio": "mario_portfolio.json"
     },
     {
-        "nome": "Giulia",
+        "nome": "giulia",
         "cognome": "Bianchi",
         "eta": 25,
         "indirizzo": "Via Milano 2",
@@ -22,7 +22,7 @@
         "portfolio": "giulia_portfolio.json"
     },
     {
-        "nome": "Luca",
+        "nome": "luca",
         "cognome": "Verdi",
         "eta": 28,
         "indirizzo": "Corso Italia 3",
