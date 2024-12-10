@@ -12,6 +12,8 @@
     </div>
 
     <script>
+        let PTfiles=locals
+        caricaPortfolio(PTfiles)
         function caricaPortfolio(PTfile) {
             const xhr = new XMLHttpRequest();
             xhr.open('GET', PTfile, true);
