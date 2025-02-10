@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa con Geolocalizzazione</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>La tua posizione sulla mappa</h3>
+    <p>Se la posizione non viene caricata, assicurati di aver attivato la geolocalizzazione.</p>
+    
+    <div id="map"></div>
+</div>
+
+<script>
+    function initMap() {
+       
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                
+                
+                var userPosition = { lat: lat, lng: lon };
+                
+              
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: userPosition,
+                    zoom: 15
+                });
+
+              
+                new google.maps.Marker({
+                    position: userPosition,
+                    map: map,
+                    title: "Sei qui!"
+                });
+
+            }, function(error) {
+                console.error("Errore nella geolocalizzazione:", error.message);
+                alert("Impossibile ottenere la posizione. Assicurati di aver attivato la geolocalizzazione.");
+            });
+        } else {
+            alert("Geolocalizzazione non supportata dal tuo browser.");
+        }
+    }
+</script>
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCulqxQyBJnl4OIPssyIsFGASo-OhYnHY8&callback=initMap"></script>
+
+</body>
+</html>
